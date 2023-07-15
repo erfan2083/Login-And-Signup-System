@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginandsignupsystem.Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="su_Form" prefHeight="400.0" prefWidth="340.0" style="-fx-background-color: #ECEFF1;">
+               <children>
+                  <TextField fx:id="su_Name" layoutX="70.0" layoutY="168.0" onAction="#createAccount" prefHeight="32.0" prefWidth="200.0" promptText="Name" style="-fx-border-color: #303F9F; -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+                  <PasswordField fx:id="su_Password" layoutX="70.0" layoutY="213.0" onAction="#createAccount" prefHeight="32.0" prefWidth="200.0" promptText="Password" style="-fx-border-color: #303F9F; -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+                  <Button fx:id="signupBtn" layoutX="120.0" layoutY="320.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #303F9F; -fx-cursor: hand; -fx-background-radius: 10px;" text="Signup" textFill="#eceff1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutY="64.0" prefHeight="34.0" prefWidth="340.0" text="Signup" textFill="#303f9f">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="si_Form" layoutX="260.0" onDragDetected="#switchForm" prefHeight="400.0" prefWidth="340.0" style="-fx-background-color: #ECEFF1;">
+               <children>
+                  <TextField fx:id="si_Name" layoutX="70.0" layoutY="168.0" onAction="#login" prefHeight="32.0" prefWidth="200.0" promptText="Name" style="-fx-border-color: #303F9F; -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+                  <PasswordField fx:id="si_Password" layoutX="70.0" layoutY="213.0" onAction="#login" prefHeight="32.0" prefWidth="200.0" promptText="Password" style="-fx-border-color: #303F9F; -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+                  <Button fx:id="loginBtn" layoutX="120.0" layoutY="320.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #303F9F; -fx-cursor: hand; -fx-background-radius: 10px;" text="Login" textFill="#eceff1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutY="64.0" prefHeight="34.0" prefWidth="340.0" text="Login" textFill="#303f9f">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="sideForm" prefHeight="400.0" prefWidth="260.0" style="-fx-background-color: #303F9F;">
+               <children>
+                  <Button fx:id="createBtn" layoutX="40.0" layoutY="322.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #ECEFF1; -fx-cursor: hand; -fx-background-radius: 10px;" text="Create Account" textFill="#303f9f">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gotoLoginBtn" layoutX="40.0" layoutY="322.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #ECEFF1; -fx-cursor: hand; -fx-background-radius: 10px;" text="Login" textFill="#303f9f" visible="false">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="iconImage" fitHeight="105.0" fitWidth="260.0" layoutX="30.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/output-onlinepngtools%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="57.0" layoutY="163.0" text="Food delivery App" textFill="#eceff1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
